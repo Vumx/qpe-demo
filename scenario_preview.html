@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QPE PlanDiff — RUN-20260629-152600-006207 &#x2192; RUN-20260629-152803-108795</title>
+<style>*, *::before, *::after { box-sizing: border-box; }
+body {
+  font-family: ui-monospace, "Cascadia Code", "Fira Mono", monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #1a1a1a;
+  background: #ffffff;
+  margin: 0;
+  padding: 1.5rem 2rem;
+}
+h1 { font-size: 1.1rem; margin: 0 0 0.25rem; }
+h2 { font-size: 0.95rem; margin: 1.25rem 0 0.4rem; border-bottom: 1px solid #ccc; padding-bottom: 0.2rem; }
+.header-meta { color: #555; margin-bottom: 1rem; }
+.freeze-descriptor { color: #4a3080; background: #f0ecfa; border-left: 3px solid #9b6de8; padding: 0.2rem 0.6rem; margin: 0.5rem 0 1rem; }
+.scope-note { color: #666; margin-top: 1.5rem; font-style: italic; }
+table { border-collapse: collapse; width: 100%; margin-bottom: 0.5rem; }
+th, td { border: 1px solid #ddd; padding: 0.25rem 0.5rem; text-align: left; vertical-align: top; }
+th { background: #f5f5f5; font-weight: bold; }
+.added    { color: #1a6b1a; }
+.removed  { color: #9b1c1c; }
+.modified { color: #7a5200; }
+.no-items { color: #888; font-style: italic; }
+.delta-pos { color: #1a6b1a; }
+.delta-neg { color: #9b1c1c; }
+.delta-zero { color: #555; }
+.summary-block { background: #f8f8f8; border: 1px solid #ddd; padding: 0.4rem 0.8rem; margin: 0.75rem 0 1rem; }
+.summary-block ul { margin: 0.25rem 0 0; padding-left: 1.4rem; }
+.summary-block li { margin: 0.1rem 0; }
+</style>
+</head>
+<body>
+<h1>QPE PlanDiff Report</h1>
+<p class="header-meta">Baseline: <code>RUN-20260629-152600-006207</code> &#x2192; Candidate: <code>RUN-20260629-152803-108795</code></p>
+<div class="summary-block"><strong>Summary</strong><ul><li>3 allocation changes</li><li>0 deferral changes</li><li>3 rank changes</li><li>total_items_delta: -1</li><li>allocated_items_delta: -1</li><li>total_effort_planned_delta: -10</li><li>total_effort_allocated_delta: -10</li><li>capacity_utilisation_pct_delta: -3.20513</li></ul></div>
+<h2>Allocations (3 changes)</h2><table><thead><tr><th scope="col">Work Item</th><th scope="col">Change</th><th scope="col">Baseline Fragments</th><th scope="col">Candidate Fragments</th></tr></thead><tbody><tr><td>EPIC-0009</td><td class="removed">Removed</td><td>DEV-002 sprint=1 effort=1.0<br>DEV-002 sprint=2 effort=8.0<br>DEV-002 sprint=3 effort=1.0</td><td><em>(none)</em></td></tr><tr><td>EPIC-0010</td><td class="modified">Modified</td><td>DEV-004 sprint=2 effort=7.0</td><td>DEV-002 sprint=1 effort=1.0<br>DEV-002 sprint=2 effort=6.0</td></tr><tr><td>EPIC-0011</td><td class="modified">Modified</td><td>DEV-006 sprint=2 effort=4.0</td><td>DEV-004 sprint=2 effort=4.0</td></tr></tbody></table>
+<h2>Deferrals (0 changes)</h2><p class="no-items">(no deferral changes)</p>
+<h2>Rank Changes (3 changes)</h2><table><thead><tr><th scope="col">Work Item</th><th scope="col">Baseline Rank</th><th scope="col">Candidate Rank</th><th scope="col">Delta</th></tr></thead><tbody><tr><td>EPIC-0009</td><td>9</td><td><em>null</em></td><td><em>n/a</em></td></tr><tr><td>EPIC-0010</td><td>10</td><td>9</td><td><span class="delta-neg">-1</span></td></tr><tr><td>EPIC-0011</td><td>11</td><td>10</td><td><span class="delta-neg">-1</span></td></tr></tbody></table>
+<h2>Metrics Delta</h2><table><thead><tr><th scope="col">Metric</th><th scope="col">Delta</th></tr></thead><tbody><tr><td>total_items_delta</td><td><span class="delta-neg">-1</span></td></tr><tr><td>allocated_items_delta</td><td><span class="delta-neg">-1</span></td></tr><tr><td>total_effort_planned_delta</td><td><span class="delta-neg">-10</span></td></tr><tr><td>total_effort_allocated_delta</td><td><span class="delta-neg">-10</span></td></tr><tr><td>capacity_utilisation_pct_delta</td><td><span class="delta-neg">-3.20513</span></td></tr></tbody></table>
+<p class="scope-note">Note: diff covers planning-decision surfaces only: allocations, deferrals, ranking and metrics.</p>
+</body>
+</html>

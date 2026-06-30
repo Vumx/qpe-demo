@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Next-Cycle Advisory — Q3-2025</title>
+<style>*, *::before, *::after { box-sizing: border-box; }
+body {
+  font-family: ui-monospace, "Cascadia Code", "Fira Mono", monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #1a1a1a;
+  background: #ffffff;
+  margin: 0;
+  padding: 1.5rem 2rem;
+}
+h1 { font-size: 1.1rem; margin: 0 0 0.25rem; }
+h2 { font-size: 0.95rem; margin: 1.25rem 0 0.4rem; border-bottom: 1px solid #ccc; padding-bottom: 0.2rem; }
+.header-meta { color: #555; margin-bottom: 1rem; }
+.advisory { color: #7a5200; font-style: italic; margin-bottom: 0.5rem; }
+table { border-collapse: collapse; width: 100%; margin-bottom: 0.5rem; }
+th, td { border: 1px solid #ddd; padding: 0.25rem 0.5rem; text-align: left; vertical-align: top; }
+th { background: #f5f5f5; font-weight: bold; }
+.no-items { color: #888; font-style: italic; }
+.disp-closed { color: #1a6b1a; font-weight: bold; }
+.disp-open-carry { color: #2b6ca0; }
+.disp-unplanned { color: #9b6c00; }
+.disp-incomplete { color: #9b6c00; }
+.disp-no-actual { color: #9b1c1c; }
+.null-value { color: #888; font-style: italic; }
+</style>
+</head>
+<body>
+<h1>Next-Cycle Reconciliation Advisory — Q3-2025</h1>
+<p class="advisory">Advisory only. No planning input is read or mutated. Disposition labels are factual classifications — not verdicts or scores.</p>
+<p class="header-meta">quarter: Q3-2025 &nbsp;|&nbsp; run: RUN-20260629-152554-336170 &nbsp;|&nbsp; sha256: db37b9aae31a4eab…</p>
+<h2>Summary</h2>
+<table>
+<tr><th>Field</th><th>Value</th></tr>
+<tr><td>coverage_band</td><td>—</td></tr>
+<tr><td>total_work_item_count</td><td>12</td></tr>
+<tr><td>closed_count (ClosedByActuals)</td><td>4</td></tr>
+<tr><td>open_carry_count (OpenCarryCandidate)</td><td>0</td></tr>
+<tr><td>unplanned_count (UnplannedActual)</td><td>1</td></tr>
+<tr><td>reported_incomplete_count (ReportedIncomplete)</td><td>1</td></tr>
+<tr><td>no_actual_count (NoActualReported)</td><td>6</td></tr>
+</table>
+<h2>Work-Item Rows</h2>
+<table>
+<tr><th>work_item_id</th><th>disposition</th><th>plan_status</th><th>join_status</th><th>actual_completion_status</th><th>actual_effort</th><th>effort_remaining</th><th>times_carried_over</th></tr>
+<tr><td>EPIC-0001</td><td><span class="disp-closed">ClosedByActuals</span></td><td>Allocated</td><td>Matched</td><td>Complete</td><td>8.0000</td><td><span class="null-value">null</span></td><td><span class="null-value">null</span></td></tr>
+<tr><td>EPIC-0002</td><td><span class="disp-closed">ClosedByActuals</span></td><td>Allocated</td><td>Matched</td><td>Complete</td><td>9.0000</td><td><span class="null-value">null</span></td><td><span class="null-value">null</span></td></tr>
+<tr><td>EPIC-0003</td><td><span class="disp-incomplete">ReportedIncomplete</span></td><td>Allocated</td><td>Matched</td><td>InProgress</td><td>9.8000</td><td><span class="null-value">null</span></td><td><span class="null-value">null</span></td></tr>
+<tr><td>EPIC-0004</td><td><span class="disp-closed">ClosedByActuals</span></td><td>Allocated</td><td>Matched</td><td>Complete</td><td>9.0000</td><td><span class="null-value">null</span></td><td><span class="null-value">null</span></td></tr>
+<tr><td>EPIC-0005</td><td><span class="disp-no-actual">NoActualReported</span></td><td>Allocated</td><td>PlannedNoActual</td><td></td><td>0.0000</td><td><span class="null-value">null</span></td><td><span class="null-value">null</span></td></tr>
+<tr><td>EPIC-0006</td><td><span class="disp-closed">ClosedByActuals</span></td><td>Allocated</td><td>Matched</td><td>Complete</td><td>5.0000</td><td><span class="null-value">null</span></td><td><span class="null-value">null</span></td></tr>
+<tr><td>EPIC-0007</td><td><span class="disp-no-actual">NoActualReported</span></td><td>Allocated</td><td>PlannedNoActual</td><td></td><td>0.0000</td><td><span class="null-value">null</span></td><td><span class="null-value">null</span></td></tr>
+<tr><td>EPIC-0008</td><td><span class="disp-no-actual">NoActualReported</span></td><td>Allocated</td><td>PlannedNoActual</td><td></td><td>0.0000</td><td><span class="null-value">null</span></td><td><span class="null-value">null</span></td></tr>
+<tr><td>EPIC-0009</td><td><span class="disp-no-actual">NoActualReported</span></td><td>Allocated</td><td>PlannedNoActual</td><td></td><td>0.0000</td><td><span class="null-value">null</span></td><td><span class="null-value">null</span></td></tr>
+<tr><td>EPIC-0010</td><td><span class="disp-no-actual">NoActualReported</span></td><td>Allocated</td><td>PlannedNoActual</td><td></td><td>0.0000</td><td><span class="null-value">null</span></td><td><span class="null-value">null</span></td></tr>
+<tr><td>EPIC-0011</td><td><span class="disp-no-actual">NoActualReported</span></td><td>Allocated</td><td>PlannedNoActual</td><td></td><td>0.0000</td><td><span class="null-value">null</span></td><td><span class="null-value">null</span></td></tr>
+<tr><td>UNPL-S1-01</td><td><span class="disp-unplanned">UnplannedActual</span></td><td>NoPlan</td><td>ActualNoPlan</td><td>Complete</td><td>1.5000</td><td><span class="null-value">null</span></td><td><span class="null-value">null</span></td></tr>
+</table>
+</body>
+</html>
