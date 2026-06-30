@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QPE Plan Health Report</title>
+<style>*, *::before, *::after { box-sizing: border-box; }
+body {
+  font-family: ui-monospace, "Cascadia Code", "Fira Mono", monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #1a1a1a;
+  background: #ffffff;
+  margin: 0;
+  padding: 1.5rem 2rem;
+}
+h1 { font-size: 1.1rem; margin: 0 0 0.25rem; }
+h2 { font-size: 0.95rem; margin: 1.25rem 0 0.4rem; border-bottom: 1px solid #ccc; padding-bottom: 0.2rem; }
+.header-meta { color: #555; margin-bottom: 1rem; }
+table { border-collapse: collapse; width: 100%; margin-bottom: 0.5rem; }
+th, td { border: 1px solid #ddd; padding: 0.25rem 0.5rem; text-align: left; vertical-align: top; }
+th { background: #f5f5f5; font-weight: bold; }
+.no-items { color: #888; font-style: italic; }
+.flag-present { font-weight: bold; }
+.flag-absent { color: #888; }
+</style>
+</head>
+<body>
+<h1>QPE Plan Health Report</h1>
+<p class="header-meta">Quarter: Q3-2025 &nbsp;|&nbsp; Run: RUN-20260630-084611-813716</p>
+<h2>Snapshot / Provenance</h2><table><tbody><tr><th>Run ID</th><td><code>RUN-20260630-084611-813716</code></td></tr><tr><th>SHA-256</th><td><code>06690bd2c4a39336ab31b827762983fd423231a5a5e97e64c0a44c503007280c</code></td></tr><tr><th>Codec Version</th><td><code>2</code></td></tr><tr><th>Quarter</th><td><code>Q3-2025</code></td></tr><tr><th>Scenario ID</th><td><code>SCEN-API-ELEV</code></td></tr><tr><th>Plan State</th><td><code>Draft</code></td></tr><tr><th>Run Status</th><td><code>Success</code></td></tr><tr><th>Freeze Sprint</th><td><em>null</em></td></tr><tr><th>Sprint Count</th><td><code>6</code></td></tr><tr><th>Timestamp</th><td><code>2026-06-30T08:46:11.813716+00:00</code></td></tr></tbody></table>
+<h2>Summary</h2><table><tbody><tr><th>Total Items</th><td>10</td></tr><tr><th>Allocated Items</th><td>10</td></tr><tr><th>Partially Allocated</th><td>0</td></tr><tr><th>Deferred Items</th><td>0</td></tr><tr><th>Total Effort Planned (days)</th><td>84.0</td></tr><tr><th>Total Effort Allocated (days)</th><td>84.0</td></tr><tr><th>Total Effort Deferred (days)</th><td>0.0</td></tr><tr><th>Support Days Scheduled</th><td>6.0</td></tr><tr><th>Capacity Utilisation (%)</th><td>26.923076923076923</td></tr><tr><th>Items With Deadline Risk</th><td>0</td></tr><tr><th>Override Conflicts</th><td>0</td></tr><tr><th>Capacity Breaches</th><td>0</td></tr><tr><th>Constraint Conflicts</th><td>0</td></tr><tr><th>Reconciliation Imbalances</th><td>0</td></tr><tr><th>Skill Fallback Allocations</th><td>0</td></tr><tr><th>Carryover Items</th><td>0</td></tr><tr><th>Capacity Context Available</th><td>Yes</td></tr></tbody></table>
+<h2>Risk Flags</h2><table><thead><tr><th>Flag</th><th>Present</th><th>Count</th></tr></thead><tbody><tr><td>CapacityBreaches</td><td class="flag-absent">false</td><td>0</td></tr><tr><td>ConstraintConflicts</td><td class="flag-absent">false</td><td>0</td></tr><tr><td>ReconciliationImbalances</td><td class="flag-absent">false</td><td>0</td></tr><tr><td>DeferredItems</td><td class="flag-absent">false</td><td>0</td></tr><tr><td>SkillFallbackAllocations</td><td class="flag-absent">false</td><td>0</td></tr><tr><td>ForcedAllocations</td><td class="flag-absent">false</td><td>0</td></tr><tr><td>CarryoverPresent</td><td class="flag-absent">false</td><td>0</td></tr></tbody></table>
+<h2>Sprint Load</h2><table><thead><tr><th>Sprint</th><th>Allocated Work Items</th><th>Active Developers</th><th>Total Allocated Effort</th><th>Capacity Total</th><th>Capacity Remaining</th></tr></thead><tbody><tr><td>1</td><td>8</td><td>6</td><td>51.5</td><td>60.0</td><td>0.0</td></tr><tr><td>2</td><td>7</td><td>5</td><td>25.5</td><td>60.0</td><td>23.0</td></tr><tr><td>3</td><td>1</td><td>1</td><td>7.0</td><td>60.0</td><td>46.0</td></tr><tr><td>4</td><td>0</td><td>0</td><td>0.0</td><td>60.0</td><td>53.0</td></tr><tr><td>5</td><td>0</td><td>0</td><td>0.0</td><td>60.0</td><td>53.0</td></tr><tr><td>6</td><td>0</td><td>0</td><td>0.0</td><td>60.0</td><td>53.0</td></tr></tbody></table>
+<h2>Developer Load</h2><table><thead><tr><th>Developer ID</th><th>Allocated Work Items</th><th>Total Allocated Effort</th><th>Support Days Total</th><th>Sprints</th></tr></thead><tbody><tr><td><code>DEV-001</code></td><td>4</td><td>21.0</td><td>1.0</td><td>1, 2, 3</td></tr><tr><td><code>DEV-002</code></td><td>2</td><td>15.0</td><td>1.0</td><td>1, 2</td></tr><tr><td><code>DEV-003</code></td><td>2</td><td>14.0</td><td>1.0</td><td>1, 2</td></tr><tr><td><code>DEV-004</code></td><td>3</td><td>12.5</td><td>1.0</td><td>1, 2</td></tr><tr><td><code>DEV-005</code></td><td>1</td><td>9.0</td><td>1.0</td><td>1</td></tr><tr><td><code>DEV-006</code></td><td>2</td><td>12.5</td><td>1.0</td><td>1, 2</td></tr></tbody></table>
+<h2>Deferral Rollup</h2><p class="no-items">(no deferred items)</p>
+<h2>Capacity Breaches</h2><p class="no-items">(no capacity breaches)</p>
+<h2>Constraint Conflicts</h2><p class="no-items">(no constraint conflicts)</p>
+<h2>Reconciliation Imbalances</h2><p class="no-items">(no reconciliation imbalances)</p>
+<h2>Carryover</h2><p class="no-items">(no carryover items)</p>
+</body>
+</html>

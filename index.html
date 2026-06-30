@@ -1,78 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QPE Demo</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      max-width: 680px;
-      margin: 60px auto;
-      padding: 0 24px;
-      color: #24292f;
-      background: #fff;
-      line-height: 1.6;
-    }
-    h1 { font-size: 1.8rem; margin-bottom: 0.3em; }
-    .badge {
-      display: inline-block;
-      background: #ddf4ff;
-      color: #0550ae;
-      border: 1px solid #b6e3ff;
-      border-radius: 4px;
-      font-size: 0.8rem;
-      padding: 2px 8px;
-      margin-bottom: 1.2em;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-    }
-    p { margin: 0.8em 0; }
-    .cta {
-      display: inline-block;
-      margin-top: 1.6em;
-      padding: 12px 24px;
-      background: #0969da;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 1rem;
-      font-weight: 600;
-    }
-    .cta:hover { background: #0550ae; }
-    footer {
-      margin-top: 3em;
-      font-size: 0.82rem;
-      color: #57606a;
-      border-top: 1px solid #d0d7de;
-      padding-top: 1em;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QPE Demo &mdash; Variant Selector</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  max-width: 840px;
+  margin: 48px auto;
+  padding: 0 24px;
+  color: #24292f;
+  background: #fff;
+  line-height: 1.6;
+}
+h1 { font-size: 1.7rem; margin: 0 0 0.25em; }
+.notice {
+  background: #ddf4ff;
+  border: 1px solid #b6e3ff;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  color: #0550ae;
+  margin: 1rem 0 1.8rem;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 16px;
+  margin-bottom: 2rem;
+}
+.card {
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  padding: 18px 20px;
+  text-decoration: none;
+  color: #24292f;
+  display: block;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.card:hover {
+  border-color: #0969da;
+  box-shadow: 0 0 0 3px rgba(9,105,218,0.12);
+}
+.card-label {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.3em;
+}
+.card-desc {
+  font-size: 0.87rem;
+  color: #57606a;
+  margin: 0 0 0.9em;
+}
+.card-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.tag {
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 12px;
+  border: 1px solid;
+}
+.tag-scenario-none { background: #f6f8fa; border-color: #d0d7de; color: #57606a; }
+.tag-scenario-active { background: #fff8c5; border-color: #d4a72c; color: #7d4e00; }
+.tag-capacity-standard { background: #f6f8fa; border-color: #d0d7de; color: #57606a; }
+.tag-capacity-constrained { background: #ffebe9; border-color: #ffb8b0; color: #82071e; }
+.compare-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #0969da;
+  text-decoration: none;
+}
+.compare-link:hover { text-decoration: underline; }
+footer {
+  margin-top: 3rem;
+  font-size: 0.8rem;
+  color: #57606a;
+  border-top: 1px solid #d0d7de;
+  padding-top: 1rem;
+}
+</style>
 </head>
 <body>
-  <h1>QPE Demo</h1>
-  <span class="badge">Synthetic data only &mdash; no real plans or projects</span>
-  <p>
-    QPE is a deterministic quarterly planning engine. Given a scope of work and
-    team capacity, it produces an allocated plan, scores scenario changes against
-    that baseline, and generates read-model reports for review.
-  </p>
-  <p>
-    This public demo uses synthetic data only. It shows how a team plan, a
-    scenario change, a plan-health view, an actuals variance, and a next-cycle
-    advisory can be reviewed through static read-model reports. Every name,
-    date, figure, and identifier is fabricated and does not represent any real
-    organisation, project, or individual.
-  </p>
-  <p>
-    The demo is read-only. No user data is uploaded or stored.
-  </p>
-  <p>
-    Open the snapshot index below, then navigate to any of the six artifact views.
-  </p>
-  <a class="cta" href="snapshot_index.html">Open Snapshot Index &rarr;</a>
-  <footer>
-    QPE Demo &middot; Synthetic data only &middot; Read-only demo &middot; Not a production system
-  </footer>
+<h1>QPE Demo</h1>
+<p class="notice">
+  All scenarios use a synthetic fictional team and backlog. Plans are pre-generated &mdash; no data is uploaded, no account is required, nothing is stored. Read-only.
+</p>
+
+<div class="grid">
+
+  <a class="card" href="variants/base-standard/snapshot_index.html">
+    <p class="card-label">Base plan &middot; Standard capacity</p>
+    <p class="card-desc">The unmodified quarterly plan. All 11 items ranked and allocated with standard team capacity. Use this as your reference point.</p>
+    <div class="card-tags">
+      <span class="tag tag-scenario-none">No scenario applied</span>
+      <span class="tag tag-capacity-standard">Standard capacity</span>
+    </div>
+  </a>
+
+  <a class="card" href="variants/base-constrained/snapshot_index.html">
+    <p class="card-label">Base plan &middot; Constrained capacity</p>
+    <p class="card-desc">The same backlog under elevated operational overhead (BAU 30%). Shows how capacity pressure reshapes the plan without any priority change.</p>
+    <div class="card-tags">
+      <span class="tag tag-scenario-none">No scenario applied</span>
+      <span class="tag tag-capacity-constrained">Constrained capacity (higher BAU overhead)</span>
+    </div>
+  </a>
+
+  <a class="card" href="variants/scenario-standard/snapshot_index.html">
+    <p class="card-label">Priority escalation &middot; Standard capacity</p>
+    <p class="card-desc">API Integration (EPIC-0007) elevated to Must priority; Analytics Dashboard (EPIC-0009) descoped. Shows the plan after a mid-quarter scope change.</p>
+    <div class="card-tags">
+      <span class="tag tag-scenario-active">API integration priority escalation applied</span>
+      <span class="tag tag-capacity-standard">Standard capacity</span>
+    </div>
+  </a>
+
+  <a class="card" href="variants/scenario-constrained/snapshot_index.html">
+    <p class="card-label">Priority escalation &middot; Constrained capacity</p>
+    <p class="card-desc">The priority escalation applied under elevated overhead. Shows the combined effect of a scope change and capacity pressure.</p>
+    <div class="card-tags">
+      <span class="tag tag-scenario-active">API integration priority escalation applied</span>
+      <span class="tag tag-capacity-constrained">Constrained capacity (higher BAU overhead)</span>
+    </div>
+  </a>
+
+</div>
+
+<a class="compare-link" href="compare.html">Compare all variants side by side &rarr;</a>
+
+<footer>
+  QPE Demo &middot; Synthetic data only &middot; Read-only demo &middot; Not a production system
+</footer>
 </body>
 </html>

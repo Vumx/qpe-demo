@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QPE Demo &mdash; Variant Comparison</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  max-width: 960px;
+  margin: 48px auto;
+  padding: 0 24px;
+  color: #24292f;
+  background: #fff;
+  line-height: 1.6;
+}
+h1 { font-size: 1.7rem; margin: 0 0 0.25em; }
+.back-nav { font-size: 0.87rem; margin-bottom: 1.2rem; }
+.back-nav a { color: #0969da; text-decoration: none; }
+.back-nav a:hover { text-decoration: underline; }
+.notice {
+  background: #ddf4ff;
+  border: 1px solid #b6e3ff;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 0.87rem;
+  color: #0550ae;
+  margin: 1rem 0 1.8rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+thead th {
+  background: #f6f8fa;
+  border: 1px solid #d0d7de;
+  padding: 8px 12px;
+  text-align: left;
+  font-weight: 600;
+}
+thead th.col-metric { width: 38%; }
+tbody tr:nth-child(even) { background: #f6f8fa; }
+td {
+  border: 1px solid #d0d7de;
+  padding: 8px 12px;
+  vertical-align: top;
+}
+td.metric-label { font-weight: 500; }
+td.value-neutral { color: #24292f; }
+td.value-highlight { color: #0550ae; font-weight: 600; }
+td.value-warn { color: #7d4e00; font-weight: 600; }
+td.value-na { color: #57606a; }
+.footnotes {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #57606a;
+  border-top: 1px solid #d0d7de;
+  padding-top: 0.8rem;
+}
+.footnotes p { margin: 0.3em 0; }
+footer {
+  margin-top: 2.5rem;
+  font-size: 0.8rem;
+  color: #57606a;
+  border-top: 1px solid #d0d7de;
+  padding-top: 1rem;
+}
+</style>
+</head>
+<body>
+
+<p class="back-nav"><a href="index.html">&larr; Back to all variants</a></p>
+<h1>Variant Comparison</h1>
+<p class="notice">
+  All values are derived from pre-generated synthetic plan outputs. No live data. Read-only.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th class="col-metric">Metric</th>
+      <th>Base plan<br>Standard capacity</th>
+      <th>Base plan<br>Constrained capacity</th>
+      <th>Priority escalation<br>Standard capacity</th>
+      <th>Priority escalation<br>Constrained capacity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="metric-label">Must items allocated (of 3)</td>
+      <td class="value-neutral">3/3</td>
+      <td class="value-neutral">3/3</td>
+      <td class="value-neutral">3/3</td>
+      <td class="value-neutral">3/3</td>
+    </tr>
+    <tr>
+      <td class="metric-label">Should items allocated (of 5)</td>
+      <td class="value-neutral">5/5</td>
+      <td class="value-neutral">5/5</td>
+      <td class="value-neutral">5/5</td>
+      <td class="value-neutral">5/5</td>
+    </tr>
+    <tr>
+      <td class="metric-label">Could items allocated*</td>
+      <td class="value-neutral">3/3</td>
+      <td class="value-neutral">3/3</td>
+      <td class="value-neutral">2/2*</td>
+      <td class="value-neutral">2/2*</td>
+    </tr>
+    <tr>
+      <td class="metric-label">Total items deferred beyond Q3</td>
+      <td class="value-neutral">0</td>
+      <td class="value-neutral">0</td>
+      <td class="value-neutral">0</td>
+      <td class="value-neutral">0</td>
+    </tr>
+    <tr>
+      <td class="metric-label">Total effort allocated (dev-days)</td>
+      <td class="value-neutral">94.0</td>
+      <td class="value-neutral">94.0</td>
+      <td class="value-neutral">84.0</td>
+      <td class="value-neutral">84.0</td>
+    </tr>
+    <tr>
+      <td class="metric-label">Net quarter utilisation&#8224;</td>
+      <td class="value-neutral">60.3%</td>
+      <td class="value-warn">77.7%</td>
+      <td class="value-neutral">53.8%</td>
+      <td class="value-warn">69.4%</td>
+    </tr>
+    <tr>
+      <td class="metric-label">Sprint 2 capacity remaining (dev-days)&#8225;</td>
+      <td class="value-neutral">14.0</td>
+      <td class="value-highlight">0.5</td>
+      <td class="value-neutral">23.0</td>
+      <td class="value-warn">4.0</td>
+    </tr>
+    <tr>
+      <td class="metric-label">Capacity breaches (sprint count)</td>
+      <td class="value-neutral">0</td>
+      <td class="value-neutral">0</td>
+      <td class="value-neutral">0</td>
+      <td class="value-neutral">0</td>
+    </tr>
+    <tr>
+      <td class="metric-label">Plan-health flag count</td>
+      <td class="value-neutral">0</td>
+      <td class="value-neutral">0</td>
+      <td class="value-neutral">0</td>
+      <td class="value-neutral">0</td>
+    </tr>
+    <tr>
+      <td class="metric-label">Scenario allocation changes</td>
+      <td class="value-na">&mdash;</td>
+      <td class="value-na">&mdash;</td>
+      <td class="value-neutral">EPIC-0009 removed; EPIC-0010/EPIC-0011 reallocated</td>
+      <td class="value-neutral">EPIC-0009 removed; EPIC-0010/EPIC-0011 reallocated</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="footnotes">
+  <p>* EPIC-0009 is excluded by the priority-escalation scenario (SCEN-API-ELEV); only 2 Could items remain in scenario variants.</p>
+  <p>&#8224; Net utilisation = allocated effort / net quarter capacity after BAU, support and leave. Engine reports approximately 30% due to a 6-sprint config; this comparison uses the 3 active demo sprints.</p>
+  <p>&#8225; Sprint 2 remaining = unallocated dev-days in Sprint 2 after placing work. Key signal: base-constrained has 0.5 dev-days spare versus 14.0 for base-standard.</p>
+</div>
+
+<footer>
+  QPE Demo &middot; Synthetic data only &middot; Read-only demo &middot; Not a production system
+</footer>
+</body>
+</html>
